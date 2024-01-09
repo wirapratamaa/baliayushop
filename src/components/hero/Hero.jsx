@@ -13,7 +13,7 @@ export const Hero = () => {
       />
       <div className="container z-10">
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="bg-white/55 w-1/2 rounded shadow-md p-6">
+          <div className="bg-white/55 w-full lg:w-1/2 rounded shadow-md p-6">
             <h1 className="text-black text-xl">Your Title</h1>
             <h1 className="text-black text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -22,7 +22,7 @@ export const Hero = () => {
               aliquam a quam, consequatur sed.
             </h1>
             <div className="flex justify-center">
-              <button className="bg-primary-100/25 text-primary-200 font-semibold rounded-md py-2.5 px-3 text-sm mt-5 hover:bg-primary-100 hover:text-white transition duration-300">
+              <button className="bg-primary-100/35 text-primary-200 font-semibold rounded-md py-2.5 px-3 text-sm mt-5 hover:bg-primary-100 hover:text-white transition duration-300">
                 View More
               </button>
             </div>
