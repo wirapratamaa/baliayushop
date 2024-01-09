@@ -50,12 +50,12 @@ const Navbar = () => {
           <Overlay setNavbarOpen={setNavbarOpen} navbarOpen={navbarOpen} />
         </div>
         <div className="items-center justify-end hidden w-fit md:flex md:order-1">
-          <ul className="flex justify-end p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <ul className="flex justify-end p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             {menuNav.map((item, i) => (
               <li key={i}>
                 <Link
                   href={item.path}
-                  className={`block py-2 px-3 hover:text-white hover:bg-primary-300/20 rounded ${
+                  className={`block py-2 px-3 md:px-2 hover:text-white hover:bg-primary-300/20 rounded transition duration-300 ${
                     isActive(item.path) ? "text-white" : ""
                   }`}
                 >
