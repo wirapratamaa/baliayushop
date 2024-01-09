@@ -55,7 +55,7 @@ const Navbar = () => {
               <li key={i}>
                 <Link
                   href={item.path}
-                  className={`block py-2 px-3 md:p-0 ${
+                  className={`block py-2 px-3 hover:text-white hover:bg-primary-300/20 rounded ${
                     isActive(item.path) ? "text-white" : ""
                   }`}
                 >
