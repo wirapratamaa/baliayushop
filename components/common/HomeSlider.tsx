@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -7,8 +7,11 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { CardHome } from "./CardHome";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const HomeSlider = () => {
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
   return (
     <div className="flex flex-col">
       <div className="flex justify-center">
@@ -28,7 +31,11 @@ const HomeSlider = () => {
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
           }}
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.play}
         >
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
