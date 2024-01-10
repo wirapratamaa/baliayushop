@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <div className="flex relative overflow-hidden h-[200px] sm:h-[200px] md:h-[300px] xl:h-[450px] w-full rounded-lg md:rounded-none bg-center bg-primary-400">
+    <div className="flex relative overflow-hidden h-[200px] sm:h-[250px] md:h-[300px] xl:h-[450px] w-full bg-center bg-primary-400">
       <Image
         alt="hero"
         src={
@@ -11,7 +11,7 @@ export const Hero = () => {
         className="object-center object-cover h-auto"
         fill
       />
-      <div className="container z-10">
+      <div className="md:container z-10">
         <div className="flex flex-col justify-center items-center h-full">
           <div className="bg-white/55 w-full lg:w-1/2 rounded shadow-md p-6">
             <h1 className="text-black text-xl">Your Title</h1>
