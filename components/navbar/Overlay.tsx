@@ -1,7 +1,11 @@
 import Link from "next/link";
-import React from "react";
 
-const Overlay = ({ setNavbarOpen, navbarOpen }) => {
+type OverlayType = {
+  setNavbarOpen: (value: boolean) => void;
+  navbarOpen: boolean;
+};
+
+const Overlay = ({ setNavbarOpen, navbarOpen }: OverlayType) => {
   const menuNav = [
     { path: "/", name: "Home" },
     { path: "/about", name: "About" },

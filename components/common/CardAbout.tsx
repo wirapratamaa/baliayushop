@@ -1,7 +1,18 @@
 import Image from "next/image";
-import React from "react";
 
-export const CardAbout = ({ title, children, src, reverse = false }) => {
+type CardAboutProps = {
+  title: string;
+  reverse?: boolean;
+  src: string;
+  children: React.ReactNode;
+};
+
+export const CardAbout = ({
+  title,
+  children,
+  src,
+  reverse = false,
+}: CardAboutProps) => {
   return (
     <div
       className={`flex ${

@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname();
-  const isActive = (href) => pathname === href;
+  const isActive = (href: string) => pathname === href;
   return (
     <nav className="bg-primary-100 sticky w-full z-20 top-0 start-0">
       <div className=" flex flex-wrap items-center justify-between py-4 px-4 md:px-16">

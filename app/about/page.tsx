@@ -1,5 +1,4 @@
 import { CardAbout } from "@/components/common/CardAbout";
-import Image from "next/image";
 
 const About = () => {
   return (

@@ -15,7 +15,7 @@ export const Hero = () => {
         <div className="flex flex-col justify-center items-center h-full">
           <div className="bg-white/55 w-full lg:w-1/2 rounded shadow-md p-6">
             <h1 className="text-black text-xl">Your Title</h1>
-            <h1 className="text-black text-sm">
+            <h1 className="text-black text-sm mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem voluptate quaerat fuga ea quos ipsum animi eos!
               Doloribus saepe odio, labore rem laboriosam doloremque voluptas,
