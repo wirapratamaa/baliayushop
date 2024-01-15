@@ -10,7 +10,7 @@ type LayoutPropsType = {
 };
 
 export const metadata = {
-  title: "Bali Ayu Shop",
+  title: { default: "Bali Ayu Shop", template: "%s | Bali Ayu Shop" },
   description: "Aromatherapy",
 };
 

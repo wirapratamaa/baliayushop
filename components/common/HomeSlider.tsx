@@ -2,16 +2,16 @@
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import { CardHome } from "./CardHome";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import CarouselList from "./CarouselList";
 
 const HomeSlider = () => {
-  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-center">
@@ -38,24 +38,7 @@ const HomeSlider = () => {
           onMouseLeave={plugin.current.play}
         >
           <CarouselContent>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <CardHome title="Aromatherapy" />
-            </CarouselItem>
+            <CarouselList />
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />

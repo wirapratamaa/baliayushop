@@ -19,7 +19,7 @@ export const CardAbout = ({
         reverse
           ? "flex-col lg:flex-row-reverse"
           : "flex-col-reverse lg:flex-row"
-      } items-center justify-center gap-10 mt-5 p-10 w-full`}
+      } items-center justify-center gap-10 mt-5 md:p-10 w-full`}
     >
       <div className="w-full lg:w-1/2">
         <div className="text-2xl text-primary-100 font-semibold">{title}</div>

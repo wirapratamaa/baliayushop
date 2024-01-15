@@ -17,11 +17,12 @@ const Home = () => {
             <span className="text-primary-200 text-3xl font-bold">
               100% Natural Organic Ingredient
             </span>
-            <span className="text-base">
+            <span className="text-base mt-3">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
               sit officia qui voluptas excepturi quisquam nesciunt eligendi.
             </span>
-            <div className="grid grid-cols-5 gap-10 mt-6 max-w-screen-lg">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mt-6 max-w-screen-lg">
+              <CardIngredients title="" />
               <CardIngredients title="" />
               <CardIngredients title="" />
               <CardIngredients title="" />

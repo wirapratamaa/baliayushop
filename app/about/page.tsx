@@ -1,5 +1,10 @@
 import { CardAbout } from "@/components/common/CardAbout";
 
+export const metadata = {
+  title: "About",
+  description: "Aromatherapy",
+};
+
 const About = () => {
   return (
     <div className="container mt-5">

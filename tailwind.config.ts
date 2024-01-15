@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        default:
+          "url('https://images.pexels.com/photos/2748757/pexels-photo-2748757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
