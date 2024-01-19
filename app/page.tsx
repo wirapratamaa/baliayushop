@@ -2,6 +2,8 @@
 import { CardIngredients } from "@/components/common/CardIngredients";
 import { Hero } from "../components/hero/Hero";
 import HomeSlider from "@/components/common/HomeSlider";
+import CarouselList from "@/components/common/CarouselList";
+import CarouselListProduct from "@/components/common/CarouselListProduct";
 
 const Home = () => {
   return (
@@ -9,7 +11,20 @@ const Home = () => {
       <Hero />
       <div className="container flex flex-col gap-y-14 mt-16">
         {/* Product by category */}
-        <HomeSlider />
+        <HomeSlider
+          title="Shop by Categories"
+          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sit
+          officia qui voluptas excepturi quisquam nesciunt eligendi."
+        >
+          <CarouselList />
+        </HomeSlider>
+        <HomeSlider
+          title="Our Featured Product"
+          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sit
+          officia qui voluptas excepturi quisquam nesciunt eligendi."
+        >
+          <CarouselListProduct />
+        </HomeSlider>
 
         {/* Natural Ingredient */}
         <div className="">

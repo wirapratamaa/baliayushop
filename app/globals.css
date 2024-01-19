@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,7 +70,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply scroll-smooth;
   }
   body {
     @apply bg-background text-foreground m-0 p-0 box-border overflow-auto;

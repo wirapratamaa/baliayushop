@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -13,18 +14,20 @@ export const Hero = () => {
       />
       <div className="md:container z-10">
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="bg-white/55 w-full lg:w-1/2 rounded shadow-md p-6">
-            <h1 className="text-black text-xl">Your Title</h1>
-            <h1 className="text-black text-sm mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem voluptate quaerat fuga ea quos ipsum animi eos!
-              Doloribus saepe odio, labore rem laboriosam doloremque voluptas,
-              aliquam a quam, consequatur sed.
+          <div className="bg-white/70 w-full lg:w-3/4 rounded shadow-md p-6">
+            <h1 className="text-black text-xl text-center">Bali Ayu Shop</h1>
+            <h1 className="text-black text-base mt-2 text-center">
+              Bali Ayu Shop is Spa, Aromatheraphy, and also Handicraft store in
+              Gianyar with a natural touch of the product
             </h1>
             <div className="flex justify-center">
-              <button className="bg-primary-100/35 text-primary-200 font-semibold rounded-md py-2.5 px-3 text-sm mt-5 hover:bg-primary-100 hover:text-white transition duration-300">
+              <Link
+                href={"#shop-categories"}
+                scroll={true}
+                className="bg-primary-100/35 text-primary-200 font-semibold rounded-md py-2.5 px-3 text-sm mt-5 hover:bg-primary-100 hover:text-white transition duration-300"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

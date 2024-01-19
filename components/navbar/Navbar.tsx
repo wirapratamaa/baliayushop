@@ -4,6 +4,7 @@ import Link from "next/link";
 import Overlay from "./Overlay";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const menuNav = [
@@ -22,7 +23,8 @@ const Navbar = () => {
           href={"/"}
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="rounded-full border bg-white p-2 text-sm">LOGO</span>
+          {/* <Image alt="" src={"/baliayu_logo.png"} height={40} width={50} /> */}
+          <span className="text-white">LOGO</span>
         </Link>
         <div className="flex md:hidden md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
