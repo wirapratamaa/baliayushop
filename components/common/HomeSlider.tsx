@@ -7,20 +7,27 @@ import {
 } from "../ui/carousel";
 import { ReactNode, useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import CarouselList from "./CarouselList";
 
 type HomeSliderProps = {
   title: string;
   description?: string;
   children: ReactNode;
+  id: string;
+  withArrow?: boolean;
 };
 
-const HomeSlider = ({ title, description, children }: HomeSliderProps) => {
+const HomeSlider = ({
+  title,
+  description,
+  children,
+  id,
+  withArrow = false,
+}: HomeSliderProps) => {
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center" id="shop-categories">
+      <div className="flex justify-center" id={id}>
         <span className="text-primary-200 text-3xl font-bold">{title}</span>
       </div>
       <div className="flex justify-center mt-3">
@@ -39,8 +46,8 @@ const HomeSlider = ({ title, description, children }: HomeSliderProps) => {
           onMouseLeave={plugin.current.play}
         >
           <CarouselContent>{children}</CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {withArrow && <CarouselPrevious />}
+          {withArrow && <CarouselNext />}
         </Carousel>
       </div>
     </div>

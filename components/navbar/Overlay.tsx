@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type OverlayType = {
   setNavbarOpen: (value: boolean) => void;
@@ -12,6 +13,8 @@ const Overlay = ({ setNavbarOpen, navbarOpen }: OverlayType) => {
     { path: "/products", name: "Products" },
     { path: "/contact", name: "Contact" },
   ];
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href;
   return (
     <div
       className={`fixed flex top-0 left-0 w-full px-10 z-10 h-screen pt-24 bg-black/75 transform delay-100 transition-all duration-300 m-0 ${
@@ -23,7 +26,9 @@ const Overlay = ({ setNavbarOpen, navbarOpen }: OverlayType) => {
           <li className="nav-li" key={i}>
             <Link
               href={item.path}
-              className="nav-link"
+              className={`nav-link ${
+                isActive(item.path) ? "text-primary-100" : ""
+              }`}
               onClick={() => {
                 setNavbarOpen(false);
               }}

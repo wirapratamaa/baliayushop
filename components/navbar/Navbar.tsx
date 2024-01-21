@@ -11,7 +11,7 @@ const Navbar = () => {
     { path: "/", name: "Home" },
     { path: "/about", name: "About" },
     { path: "/products", name: "Products" },
-    { path: "/contact", name: "Contact" },
+    // { path: "/contact", name: "Contact" },
   ];
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname();
@@ -24,7 +24,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <div className="relative w-28 h-14">
-            <Image alt="" src={"/baliayu-logo.png"} fill />
+            <Image alt="logo" src={"/baliayu-logo.png"} fill sizes="100%" />
           </div>
 
           {/* <span className="text-white">LOGO</span> */}
@@ -36,17 +36,17 @@ const Navbar = () => {
           >
             <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
               <span
-                className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${
+                className={`absolute h-0.5 w-5 bg-primary-100 transform transition duration-300 ease-in-out ${
                   navbarOpen ? "rotate-45 delay-200" : "-translate-y-1.5"
                 }`}
               ></span>
               <span
-                className={`absolute h-0.5 bg-white transform transition-all duration-200 ease-in-out ${
+                className={`absolute h-0.5 bg-primary-100 transform transition-all duration-200 ease-in-out ${
                   navbarOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
                 }`}
               ></span>
               <span
-                className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${
+                className={`absolute h-0.5 w-5 bg-primary-100 transform transition duration-300 ease-in-out ${
                   navbarOpen ? "-rotate-45 delay-200" : "translate-y-1.5"
                 }`}
               ></span>
@@ -60,10 +60,10 @@ const Navbar = () => {
               <li key={i}>
                 <Link
                   href={item.path}
-                  className={`block py-2 px-3 md:px-2 hover:text-primary-100 hover:bg-primary-300/80 rounded transition duration-300 ${
+                  className={`block py-2 px-3 md:px-2 border-b-2 hover:border-primary-100 transition duration-300 ${
                     isActive(item.path)
-                      ? "text-primary-100 bg-primary-300/80"
-                      : ""
+                      ? "text-primary-100 border-primary-100"
+                      : "border-transparent"
                   }`}
                 >
                   {item.name}

@@ -13,7 +13,8 @@ export const generateMetadata = async ({ params }: ProductProps) => {
   const product = await getProduct(id);
   return {
     title: `${product?.name} ${product?.variant}`,
-    description: `${product?.name} ${product?.variant}`,
+    description:
+      "Bali Ayu Nature is a brand of natural beauty products with presenting the goodness of nature, as a form of our commitment to care for women to look beautiful without harming their health. Bali Ayu comes with the uniqueness of traditional concoction products combined with the benefits of wealth natural. We ensure the natural quality of products by selecting only ingredients safe and halal quality raw materials. We believe that the goodness of nature can maintain and care for the beauty of the skin of women.",
   };
 };
 
@@ -24,33 +25,12 @@ const Product = async ({ params }: ProductProps) => {
   console.log(product);
   return (
     <div className="container mt-10">
-      <div className="flex justify-center mb-5">
-        <span className="text-2xl font-bold text-primary-200 border-b-2 border-primary-100">
-          Product Detail
+      <div className="flex flex-col justify-center items-center gap-5">
+        <span className="font-bold text-xl text-primary-100 border-b-2 border-primary-100">
+          {product?.name}
         </span>
-      </div>
-      <div className="flex flex-col md:flex-row gap-5">
-        <div className="w-1/3">
-          <ProductView src={`/assets/${product?.src}.jpg`} />
-        </div>
-        <div className="w-2/3">
-          <div className="flex flex-col gap-5">
-            <span className="font-bold text-xl">
-              {product?.name} {product?.variant}
-            </span>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex ipsum
-              accusantium voluptates, beatae laborum esse error vitae tenetur,
-              incidunt nesciunt omnis animi doloremque asperiores provident?
-              Veniam similique ratione nulla accusantium?
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Doloribus et beatae nisi debitis hic necessitatibus atque sapiente
-              voluptatibus fugit! Sequi porro optio facilis reprehenderit
-              praesentium neque placeat aperiam possimus veritatis?
-            </p>
-          </div>
+        <div className="w-full">
+          <ProductView src={product?.src} />
         </div>
       </div>
     </div>

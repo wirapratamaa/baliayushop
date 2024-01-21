@@ -13,8 +13,7 @@ const CarouselListProduct = async () => {
             <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={prod.id}>
               <CardHomeProduct
                 title={prod.name}
-                variant={prod.variant}
-                src={`/assets/${prod.src}.jpg`}
+                src={`/assets/${prod.src[0]}.jpg`}
                 id={prod.id}
               />
             </CarouselItem>

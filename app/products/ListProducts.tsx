@@ -20,8 +20,7 @@ const ListProducts = async ({ category }: ListProductProps) => {
             {item.data.map((product) => (
               <CardProduct
                 title={product.name}
-                variant={product.variant}
-                src={`/assets/${product.src}.jpg`}
+                src={`/assets/${product.src[0]}.jpg`}
                 key={product.id}
                 id={product.id}
               />
