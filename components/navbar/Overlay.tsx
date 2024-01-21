@@ -11,7 +11,7 @@ const Overlay = ({ setNavbarOpen, navbarOpen }: OverlayType) => {
     { path: "/", name: "Home" },
     { path: "/about", name: "About" },
     { path: "/products", name: "Products" },
-    { path: "/contact", name: "Contact" },
+    // { path: "/contact", name: "Contact" },
   ];
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;

@@ -47,7 +47,7 @@ const Home = () => {
               and halal quality raw materials. We believe that the goodness of
               nature can maintain and care for the beauty of the skin of women.
             </span>
-            <div className="grid grid-flow-col gap-10 mt-6 max-w-screen-lg">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mt-6 max-w-screen-lg">
               <CardIngredients>
                 <Image alt="natural" src={"/natural.png"} fill />
               </CardIngredients>

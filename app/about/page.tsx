@@ -38,7 +38,7 @@ const About = () => {
           </div>
         </CardAbout>
 
-        <CardAbout title={"Profile"} src={"/works.png"} reverse={true}>
+        <CardAbout title={"Workshop"} src={"/works.png"} reverse={true}>
           <div className="mt-10">
             <span className="text-justify">
               Currently, there are 25 working people from around our
