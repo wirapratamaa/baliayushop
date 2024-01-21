@@ -39,15 +39,13 @@ const About = () => {
         </CardAbout>
 
         <CardAbout title={"Workshop"} src={"/works.png"} reverse={true}>
-          <div className="mt-10">
-            <span className="text-justify">
-              Currently, there are 25 working people from around our
-              neighbourhood who come directly to our factory for work and there
-              are 25 other mothers who take their work to the factory and do it
-              at home because their baby cannot be left behind. They can do it
-              at home while looking after their baby and bring it back to the
-              factory after they finish.
-            </span>
+          <div className="mt-10 text-justify">
+            Currently, there are 25 working people from around our neighbourhood
+            who come directly to our factory for work and there are 25 other
+            mothers who take their work to the factory and do it at home because
+            their baby cannot be left behind. They can do it at home while
+            looking after their baby and bring it back to the factory after they
+            finish.
           </div>
         </CardAbout>
       </div>
