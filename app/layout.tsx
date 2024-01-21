@@ -17,6 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: LayoutPropsType) {
   return (
     <html lang="en">
+      <link rel="icon" href="/baliayu.svg" sizes="any" />
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           <Navbar />

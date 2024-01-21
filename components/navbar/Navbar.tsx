@@ -17,14 +17,17 @@ const Navbar = () => {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
   return (
-    <nav className="bg-primary-100 sticky w-full z-20 top-0 start-0">
-      <div className=" flex flex-wrap items-center justify-between py-4 px-4 md:px-16">
+    <nav className="bg-white sticky w-full z-20 top-0 start-0 shadow-lg">
+      <div className=" flex flex-wrap items-center justify-between py-2 px-4 md:px-16">
         <Link
           href={"/"}
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          {/* <Image alt="" src={"/baliayu_logo.png"} height={40} width={50} /> */}
-          <span className="text-white">LOGO</span>
+          <div className="relative w-28 h-14">
+            <Image alt="" src={"/baliayu-logo.png"} fill />
+          </div>
+
+          {/* <span className="text-white">LOGO</span> */}
         </Link>
         <div className="flex md:hidden md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
@@ -57,8 +60,10 @@ const Navbar = () => {
               <li key={i}>
                 <Link
                   href={item.path}
-                  className={`block py-2 px-3 md:px-2 hover:text-white hover:bg-primary-300/20 rounded transition duration-300 ${
-                    isActive(item.path) ? "text-white" : ""
+                  className={`block py-2 px-3 md:px-2 hover:text-primary-100 hover:bg-primary-300/80 rounded transition duration-300 ${
+                    isActive(item.path)
+                      ? "text-primary-100 bg-primary-300/80"
+                      : ""
                   }`}
                 >
                   {item.name}
