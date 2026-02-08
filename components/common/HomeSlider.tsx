@@ -43,7 +43,6 @@ const HomeSlider = ({
           }}
           plugins={[plugin.current]}
           onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.play}
         >
           <CarouselContent>{children}</CarouselContent>
           {withArrow && <CarouselPrevious />}
