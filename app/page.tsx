@@ -16,16 +16,14 @@ const Home = () => {
         <HomeSlider
           title="Shop by Categories"
           id="shop-categories"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sit
-          officia qui voluptas excepturi quisquam nesciunt eligendi."
+          description="Your favorites, one category at a time"
         >
           <CarouselList />
         </HomeSlider>
         <HomeSlider
           title="Our Featured Product"
           id="shop-product"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore sit
-          officia qui voluptas excepturi quisquam nesciunt eligendi."
+          description="Quick picks based on your needs"
           withArrow
         >
           <CarouselListProduct />

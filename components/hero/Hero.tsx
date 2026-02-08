@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Hero = () => {
+export const Hero = async () => {
+  const src =
+    "https://images.pexels.com/photos/12408950/pexels-photo-12408950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   return (
     <div className="flex relative overflow-hidden md:h-[350px] xl:h-[450px] w-full bg-center bg-primary-400">
       <Image
         alt="hero"
-        src={
-          "https://images.pexels.com/photos/12408950/pexels-photo-12408950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        }
+        src={src}
         className="object-center object-cover h-auto"
         fill
       />

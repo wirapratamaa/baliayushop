@@ -1,4 +1,4 @@
-const loading = () => {
+const Loading = () => {
   return (
     <div className="fixed h-screen z-30 inset-1/2">
       <div role="status">
@@ -24,4 +24,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;

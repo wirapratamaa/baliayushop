@@ -1,3 +1,4 @@
+import getLocalBlur from "@/lib/getLocalBlur";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,10 @@ type CardProductProps = {
   id: string;
 };
 
-export const CardProduct = ({ title, src, id }: CardProductProps) => {
+export const CardProduct = async ({ title, src, id }: CardProductProps) => {
+  const dataBlur = await getLocalBlur(src);
+
+  console.log(dataBlur);
   return (
     <Link
       href={{
@@ -21,6 +25,8 @@ export const CardProduct = ({ title, src, id }: CardProductProps) => {
           src={src}
           className="object-center object-cover rounded-t-lg"
           fill
+          // blurDataURL={dataBlur}
+          // placeholder="blur"
         />
       </div>
       <div className="capitalize text-lg py-6 font-semibold w-full text-center">
